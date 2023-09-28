@@ -80,26 +80,75 @@
     .page-link {
       color: black;
     }
+
+    .bg-img {
+      background-image: url(images/hero.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    .bg-card {
+      background-color: gray;
+    }
+
+    .card {
+      transition: all .15s;
+    }
+
+    .card:hover {
+      box-shadow: 0px 19px 38px -9px rgba(0,0,0,0.3);
+      transform: translateY(-10px);
+    }
+
+    .bg-nav {
+      background-color: rgba(0, 0, 0, 0.496);
+      backdrop-filter: blur(5px);
+    }
+
+    .flex-auto {
+      flex: 0 0 auto;
+    }
+
+    .h-250 { height: 250px; }
+    @media (min-width: 768px) {
+      .h-md-250 { height: 250px; }
+    }
+
+    /* Pagination */
+    .blog-pagination {
+      margin-bottom: 4rem;
+    }
+
+    /*
+    * Blog posts
+    */
+    .blog-post {
+      margin-bottom: 4rem;
+    }
+    .blog-post-meta {
+      margin-bottom: 1.25rem;
+      color: #727272;
+    }
   </style>
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-lg bg-light fixed-top border-bottom">
+  <nav class="navbar navbar-expand-lg bg-nav fixed-top">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">Universitas Hasanuddin</a>
+      <a class="navbar-brand text-white" href="#">Universitas Hasanuddin</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Beranda</a>
+            <a class="nav-link active text-white" aria-current="page" href="#">Beranda</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#tentang-unhas">Tentang</a>
+            <a class="nav-link text-white" href="#tentang-unhas">Tentang</a>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Kemahasiswaan
             </a>
             <ul class="dropdown-menu">
@@ -109,7 +158,7 @@
             </ul>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#footer">Kontak</a>
+            <a class="nav-link text-white" href="#footer">Kontak</a>
           </li>
         </ul>
       </div>
@@ -118,11 +167,11 @@
 
   <main>
     <!-- HERO -->
-    <div class="p-4 p-md-5 mb-4 rounded text-body-emphasis bg-body-tertiary">
+    <div class="p-4 p-md-5 mb-4 rounded text-body-emphasis bg-img">
       <div class="col-lg-6 px-0">
-        <h1 class="fst-italic" style="font-size: 4rem;">Universitas Hasanuddin</h1>
-        <p class="lead my-3">Pusat unggulan pengembangan manusia, ilmu pengetahuan, teknologi, seni dan budaya berbasis Benua Maritim Indonesia</p>
-        <p class="lead mb-0"><a href="https://www.unhas.ac.id/#" class="text-body-emphasis fw-bold">Lanjutkan membaca...</a></p>
+        <h1 class="fst-italic text-white" style="font-size: 4rem;">Universitas Hasanuddin</h1>
+        <p class="lead my-3 text-white-50">Pusat unggulan pengembangan manusia, ilmu pengetahuan, teknologi, seni dan budaya berbasis Benua Maritim Indonesia</p>
+        <p class="lead mb-0"><a href="https://www.unhas.ac.id/#" class="text-white-50">Lanjutkan membaca...</a></p>
       </div>
     </div>
 
@@ -130,8 +179,8 @@
     <div class="cards-container">
       <div class="row">
         <div class="col-sm-6 mb-3 mb-sm-0">
-          <div class="card">
-            <div class="card-body">
+          <div class="card" style="border: none; outline: none;">
+            <div class="card-body bg-body-secondary">
               <h5 class="card-title fw-bolder">Green Kampus</h5>
               <p class="card-text">Hasanuddin University has been active in UI Greenmetrics since 2016. In 2021, Hasanuddin University will be ranked 187th in the world (out of a total of 956 registered universities)</p>
               <a href="https://www.unhas.ac.id/#" class="btn btn-outline-dark">Baca selengkapnya</a>
@@ -139,7 +188,7 @@
           </div>
         </div>
         <div class="col-sm-6 mb-3 mb">
-          <div class="card">
+          <div class="card bg-body-secondary" style="border: none; outline: none;">
             <div class="card-body">
               <h5 class="card-title fw-bolder">Strategic Partnership</h5>
               <p class="card-text">As a legal educational institution, Unhas continues to optimize partnership relationships with various sectors as an effort to develop a wider network and increase social roles and responsibilities.</p>
@@ -284,8 +333,47 @@
     <!-- TENTANG -->
     <div id="tentang-unhas" class="row g-5 pt-3" style="margin: 3rem 0;">
       <div class="col-md-8">
-        <h2 class="pb-2 mb-4 fst-italic border-bottom">
-          Tentang Universitas Hasanuddin
+        <h2 class="pb-2 mb-4 fst-italic border-bottom">Fasilitas Umum</h2>
+        <div class="row row-cols-1 row-cols-md-2 g-4">
+          <div class="col">
+            <div class="card">
+              <img src="images/fasilitas/or.jpeg" class="card-img-top" alt="Sport Art Culture Unhas">
+              <div class="card-body">
+                <h5 class="card-title">Sport Art Culture (SPACE)</h5>
+                <p class="card-text">Tidak hanya mahasiswa, SPACE Park juga biasa digunakan oleh masyarakat umum untuk berolahraga.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+              <img src="images/fasilitas/rusa.jpg" class="card-img-top" alt="Beberapa rusa di dalam kandang">
+              <div class="card-body">
+                <h5 class="card-title">Kandang Rusa</h5>
+                <p class="card-text">Selain menambah daya tarik, keberadaan rusa juga menjadi bahan penelitian mahasiswa Fakultas Kedokteran Hewan Unhas.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+              <img src="images/fasilitas/taman.jpeg" class="card-img-top" alt="Seorang wanita yang sedang duduk di taman Unhas">
+              <div class="card-body">
+                <h5 class="card-title">Taman</h5>
+                <p class="card-text">Berlokasi di Pintu I, Taman ini seringkali dikunjungi oleh masyarakat untuk menghabiskan waktu mereka.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+              <img src="images/fasilitas/jembatan.jpg" class="card-img-top" alt="Jembatan Unhas">
+              <div class="card-body">
+                <h5 class="card-title">Jembatan Rekreasi</h5>
+                <p class="card-text">Jembatan ini berlokasi di Pintu I dan berada di dekat Masjid Ikhtiar Kampus, Taman, dan SPACE Park Unhas.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <h2 class="pb-2 mb-4 mt-lg-5 fst-italic border-bottom">
+          Tentang Unhas
         </h2>
   
         <article class="blog-post">  
@@ -399,16 +487,27 @@
           </div><!-- end of events -->          
         </div>
       </div> <!-- end of sidebar -->      
-    </div> <!-- end of TENTANG -->    
+    </div> <!-- end of TENTANG -->
+
+    <div class="sticky-bottom">
+
+    </div>
   </main>
 
   <!-- FOOTER -->
   <footer id="footer" class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top" style="padding: 0 2rem;">
     <div class="col-md-4 d-flex align-items-center">
-      <span class="mb-3 mb-md-0 text-body-secondary"><b>Meantoes. </b>&copy; 2023 Universitas Hasanuddin</span>
+      <span class="mb-3 mb-md-0 text-body-secondary"><b>meantoes. </b>&copy; 2023 Universitas Hasanuddin</span>
     </div>
 
     <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+      <li class="ms-3"><a class="text-body-secondary" href="https://maps.app.goo.gl/9U8HqCG8NSCWLMEX9">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-geo-alt" viewBox="0 0 16 16">
+          <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z"/>
+          <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+        </svg>
+      </a></li>
+
       <li class="ms-3"><a class="text-body-secondary" href="https://www.youtube.com/@UniversitasHasanuddin">
         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-youtube" viewBox="0 0 16 16">
           <path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408L6.4 5.209z"/>
